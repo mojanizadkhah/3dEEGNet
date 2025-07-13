@@ -58,8 +58,8 @@ for stim in ['saccade', 'stimulus']:
             X, y = DatasetLoader(DIR)
             X = threedconversion(X)
 
-            X, y, num_removed = filter_extreme_voxelwise(X, y, std_threshold=5)
-            print(f"Removed {num_removed} extreme trials.")
+            # X, y, num_removed = filter_extreme_voxelwise(X, y, std_threshold=5)
+            # print(f"Removed {num_removed} extreme trials.")
 
             X = np.expand_dims(X, axis=1).astype('float32')
             y = y.astype('float32').reshape(-1)
